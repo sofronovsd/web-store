@@ -10,7 +10,7 @@ import {
   InputRightElement,
 } from '@chakra-ui/react';
 import { CloseIcon, SearchIcon } from '@chakra-ui/icons';
-import { CartIcon } from '../../icons';
+import { CartIcon } from 'src/icons';
 
 export function Header() {
   return (
