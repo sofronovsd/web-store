@@ -1,13 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import { Box, Button } from "@chakra-ui/react";
+import { useState } from 'react';
+import reactLogo from './assets/react.svg';
+import viteLogo from '/vite.svg';
+import { Box, Button } from '@chakra-ui/react';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-    <Box bg="aqua" display="flex" flexDirection="column" justifyContent="center" alignItems="center" minH="100vh">
+    <Box
+      bg="aqua"
+      display="flex"
+      flexDirection="column"
+      justifyContent="center"
+      alignItems="center"
+      minH="100vh"
+    >
       <Box display="flex">
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -29,7 +36,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </Box>
-  )
+  );
 }
 
-export default App
+export default App;
