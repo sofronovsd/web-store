@@ -11,6 +11,7 @@ export default defineConfig({
       pages: "/src/pages",
       icons: "/src/icons",
       api: "/src/api",
+      hooks: "/src/hooks",
     },
   },
 })
