@@ -1,5 +1,5 @@
 import { Header, ProductCard } from 'src/components';
-import {Box, Container, Flex} from '@chakra-ui/react';
+import { Box, Container, Flex } from '@chakra-ui/react';
 import { useProducts } from 'src/hooks';
 
 export function MainPage() {
