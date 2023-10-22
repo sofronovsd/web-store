@@ -1,14 +1,14 @@
-import { Product, useProducts } from 'src/hooks';
+import { Product, ProductsContext } from 'src/hooks';
 import { Card, CardBody, CardFooter, Image } from '@chakra-ui/react';
 import reactLogo from '../../assets/react.svg';
-import {useState} from "react";
+import { useContext, useState } from 'react';
 
 type Props = {
   product: Product;
 };
 
 export function ProductCard({ product }: Props) {
-  const { selectProduct } = useProducts();
+  const { selectProduct } = useContext(ProductsContext);
   const [isSelected, setSelected] = useState(false);
   return (
     <Card
@@ -22,7 +22,7 @@ export function ProductCard({ product }: Props) {
           id: product.id,
         });
         selectProduct(product.id);
-        setSelected(prev => !prev)
+        setSelected((prev) => !prev);
       }}
     >
       <CardBody>

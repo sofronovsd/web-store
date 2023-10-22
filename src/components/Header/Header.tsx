@@ -8,11 +8,15 @@ import {
   InputGroup,
   InputLeftElement,
   InputRightElement,
+  Tag,
 } from '@chakra-ui/react';
 import { CloseIcon, SearchIcon } from '@chakra-ui/icons';
 import { CartIcon } from 'src/icons';
+import { ProductsContext } from 'src/hooks';
+import { useContext } from 'react';
 
 export function Header() {
+  const { selectedProductsAmount } = useContext(ProductsContext);
   return (
     <Flex
       as="header"
@@ -38,7 +42,18 @@ export function Header() {
         />
       </InputGroup>
       <ButtonGroup>
-        <IconButton aria-label="Show the cart" icon={<CartIcon />} />
+        <Box>
+          <IconButton aria-label="Show the cart" icon={<CartIcon />} />
+          <Tag
+            size="sm"
+            colorScheme="red"
+            position="absolute"
+            top="2px"
+            right="2px"
+          >
+            {selectedProductsAmount}
+          </Tag>
+        </Box>
       </ButtonGroup>
     </Flex>
   );

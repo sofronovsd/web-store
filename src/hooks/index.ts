@@ -1,1 +1,1 @@
-export * from './useProducts.ts';
+export * from './useProducts.tsx';
